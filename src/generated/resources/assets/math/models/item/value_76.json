@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "neoforge:item_layers",
+  "neoforge_data": {
+    "layers": {
+      "1": {
+        "color": "ffa52a2a"
+      }
+    }
+  },
+  "render_types": {},
+  "textures": {
+    "layer0": "math:item/rune",
+    "layer1": "math:item/numbers/6"
+  }
+}
