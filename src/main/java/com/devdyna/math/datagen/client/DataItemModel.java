@@ -47,25 +47,13 @@ public class DataItemModel extends ItemModelProvider {
             }
         });
 
-        // int[] colors = {
-        // FastColor.ARGB32.color(255, 255, 0, 0),
-        // FastColor.ARGB32.color(255, 0, 0, 255),
-        // FastColor.ARGB32.color(255, 0, 255, 0),
-        // FastColor.ARGB32.color(255, 255, 255, 0),
-        // FastColor.ARGB32.color(255, 255, 165, 0),
-        // FastColor.ARGB32.color(255, 128, 0, 128),
-        // FastColor.ARGB32.color(255, 255, 192, 203),
-        // FastColor.ARGB32.color(255, 165, 42, 42),
-        // FastColor.ARGB32.color(255, 0, 0, 0),
-        // FastColor.ARGB32.color(255, 255, 255, 255),
-        // };
+        //TODO operators
 
         int[] red = { 255, 0, 0, 255, 255, 128, 255, 165, 0, 255 };
 
         int[] green = { 0, 0, 255, 255, 165, 0, 192, 42, 0, 255 };
 
         int[] blue = { 0, 255, 0, 0, 0, 128, 203, 42, 0, 255 };
-
 
         for (int decimal = 0; decimal < 10; decimal++) {
 
@@ -82,16 +70,7 @@ public class DataItemModel extends ItemModelProvider {
                                 255,
                                 red[decimal],
                                 green[decimal],
-                                blue[decimal]), 1)
-
-                        // .color(FastColor.ARGB32.color(
-                        //         255,
-                        //          newRed[decimal],
-                        //          newGreen[decimal],
-                        //          newBlue[decimal]), 2)
-                        ;
-                        
-                // .emissive(emissivity, emissivity, 0).renderType("minecraft:translucent", 0)
+                                blue[decimal]), 1);
             }
         }
 

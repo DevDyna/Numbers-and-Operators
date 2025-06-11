@@ -29,7 +29,10 @@ public class zItems {
     public static final DeferredRegister.Items zItem = DeferredRegister.createItems(Main.MODID);
     // ---------------------------------------------------------------------------------------//
 
-    public static DeferredItem<BaseItemCraftingRemain> PLUS = zOperators.register("plus", () -> new BaseItemCraftingRemain());
+    public static DeferredItem<BaseItemCraftingRemain> PLUS = zOperators.register("plus",
+            () -> new BaseItemCraftingRemain());
+
+    // TODO add operators
 
     public static void itemRegister() {
 

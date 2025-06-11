@@ -23,6 +23,8 @@ public class DataRecipe extends RecipeProvider {
         @Override
         protected void buildRecipes(RecipeOutput c) {
 
+                //TODO all recipes
+
                 ShapelessRecipeBuilder.shapeless(MISC, DataGenUtil.getItem("value_2"), 1)
                                 .requires(DataGenUtil.getItem("value_1"))
                                 .requires(zItems.PLUS.get())
