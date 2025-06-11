@@ -2,7 +2,6 @@ package com.devdyna.math.datagen.server;
 
 import static com.devdyna.math.Main.MODID;
 import static net.minecraft.data.recipes.RecipeCategory.MISC;
-import static net.minecraft.world.item.Items.*;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,14 +23,14 @@ public class DataRecipe extends RecipeProvider {
         @Override
         protected void buildRecipes(RecipeOutput c) {
 
-                // ShapelessRecipeBuilder.shapeless(MISC, DataGenUtil.getItem("value_2"), 1)
-                //                 .requires(DataGenUtil.getItem("value_1"))
-                //                 .requires(zItems.PLUS.get())
-                //                 .requires(DataGenUtil.getItem("value_1"))
-                //                 .group(MODID)
-                //                 .unlockedBy(MODID, InventoryChangeTrigger.TriggerInstance
-                //                                 .hasItems(zItems.PLUS.get()))
-                //                 .save(c);
+                ShapelessRecipeBuilder.shapeless(MISC, DataGenUtil.getItem("value_2"), 1)
+                                .requires(DataGenUtil.getItem("value_1"))
+                                .requires(zItems.PLUS.get())
+                                .requires(DataGenUtil.getItem("value_1"))
+                                .group(MODID)
+                                .unlockedBy(MODID, InventoryChangeTrigger.TriggerInstance
+                                                .hasItems(zItems.PLUS.get()))
+                                .save(c);
                 
         }
 

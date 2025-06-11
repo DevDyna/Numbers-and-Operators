@@ -2,8 +2,8 @@ package com.devdyna.math.init.types;
 
 import com.devdyna.math.Main;
 import com.devdyna.math.init.Material;
+import com.devdyna.math.init.builder.BaseItemCraftingRemain;
 import com.devdyna.math.init.builder.NumberItem;
-import com.devdyna.math.init.builder.OperatorItem;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -29,11 +29,7 @@ public class zItems {
     public static final DeferredRegister.Items zItem = DeferredRegister.createItems(Main.MODID);
     // ---------------------------------------------------------------------------------------//
 
-    // public static DeferredItem<OperatorItem> PLUS;
-
-    // static {
-    //     PLUS = zOperators.register("plus", () -> new OperatorItem(Material.iProp.craftRemainder(PLUS.get())));
-    // }
+    public static DeferredItem<BaseItemCraftingRemain> PLUS = zOperators.register("plus", () -> new BaseItemCraftingRemain());
 
     public static void itemRegister() {
 
