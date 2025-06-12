@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "math:value_1"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "math:plus"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "math:less"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "math:for"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "math:div"
+        }
+      ]
+    }
+  ]
+}
