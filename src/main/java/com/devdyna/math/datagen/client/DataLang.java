@@ -2,6 +2,7 @@ package com.devdyna.math.datagen.client;
 
 import static com.devdyna.math.Main.MODID;
 
+import com.devdyna.math.Values;
 import com.devdyna.math.init.types.zItems;
 
 import net.minecraft.data.PackOutput;
@@ -17,7 +18,7 @@ public class DataLang extends LanguageProvider {
     protected void addTranslations() {
         add(MODID + ".tab", "Numbers and Operators");
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < Values.MAX_VALUE; i++) {
             add("item." + MODID + ".value_" + i, "Rune " + i);
         }
 

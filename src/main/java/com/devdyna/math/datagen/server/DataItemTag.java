@@ -2,6 +2,9 @@ package com.devdyna.math.datagen.server;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.devdyna.math.init.types.zItemTag;
+import com.devdyna.math.init.types.zItems;
+
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -17,8 +20,10 @@ public class DataItemTag extends ItemTagsProvider {
 
     @Override
     protected void addTags(Provider p) {
-        // tag(ItemTag.IT)
-        //         .add(Items.ACACIA_BOAT);
+        
+        zItems.zOperators.getEntries().forEach(it->tag(zItemTag.OPERATORS).add(it.get()));
+        zItems.zNumbers.getEntries().forEach(it->tag(zItemTag.NUMBERS).add(it.get()));
+    
     }
 
 }

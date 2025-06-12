@@ -23,8 +23,8 @@ public class BaseItemCraftingRemain extends Item {
         return true;
     }
 
-    @Override
-    public boolean isFoil(ItemStack stack) {
-        return true;
-    }
+    // @Override
+    // public boolean isFoil(ItemStack stack) {
+    //     return true;
+    // }
 }

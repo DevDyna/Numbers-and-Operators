@@ -2,10 +2,8 @@ package com.devdyna.math.datagen.client;
 
 import static com.devdyna.math.Main.MODID;
 
-import com.devdyna.math.init.types.zBlocks;
+import com.devdyna.math.Values;
 import com.devdyna.math.init.types.zItems;
-import com.devdyna.math.utils.DataGenUtil;
-
 import net.minecraft.data.PackOutput;
 import net.minecraft.util.FastColor;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -21,33 +19,35 @@ public class DataItemModel extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
-        zItems.zTool.getEntries().forEach(item -> {
-            try {
-                DataGenUtil.itemTool(item.get(), this);
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        });
+        // zItems.zTool.getEntries().forEach(item -> {
+        //     try {
+        //         DataGenUtil.itemTool(item.get(), this);
+        //     } catch (Exception e) {
+        //         System.out.println(e);
+        //     }
+        // });
 
-        zItems.zItem.getEntries().forEach(item -> {
+        // zItems.zItem.getEntries().forEach(item -> {
 
-            try {
-                DataGenUtil.itemModel(item.get(), this);
-            } catch (Exception e) {
-                System.out.println(e);
-            }
+        //     try {
+        //         DataGenUtil.itemModel(item.get(), this);
+        //     } catch (Exception e) {
+        //         System.out.println(e);
+        //     }
 
-        });
+        // });
 
-        zBlocks.zBlockItem.getEntries().forEach(block -> {
-            try {
-                DataGenUtil.itemBlock(block.get(), this);
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        });
+        // zBlocks.zBlockItem.getEntries().forEach(block -> {
+        //     try {
+        //         DataGenUtil.itemBlock(block.get(), this);
+        //     } catch (Exception e) {
+        //         System.out.println(e);
+        //     }
+        // });
 
-        //TODO operators
+        zItems.zOperators.getEntries()
+                .forEach(item -> withExistingParent(item.getRegisteredName(), mcLoc("item/generated")).texture("layer0",
+                        MODID + ":item/operators/" + item.getRegisteredName().replace(MODID + ":", "")));
 
         int[] red = { 255, 0, 0, 255, 255, 128, 255, 165, 0, 255 };
 
@@ -55,10 +55,10 @@ public class DataItemModel extends ItemModelProvider {
 
         int[] blue = { 0, 255, 0, 0, 0, 128, 203, 42, 0, 255 };
 
-        for (int decimal = 0; decimal < 10; decimal++) {
+        for (int decimal = 0; decimal < Values.MAX_VALUE/10; decimal++) {
 
-            for (int unit = 0; unit < 10; unit++) {
-                int number = decimal * 10 + unit;
+            for (int unit = 0; unit < Values.MAX_VALUE/10; unit++) {
+                int number = decimal * Values.MAX_VALUE/10 + unit;
 
                 withExistingParent("value_" + number,
                         mcLoc("item/generated"))

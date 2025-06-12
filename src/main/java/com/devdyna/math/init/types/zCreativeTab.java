@@ -29,19 +29,23 @@ public class zCreativeTab {
                                         // .icon(() -> Items.IT.get().getDefaultInstance())
                                         .displayItems((parameters, output) -> {
 
-                                                zItems.zItem.getEntries().forEach(e -> {
-                                                        output.accept((Item) e.get());
-                                                });
+                                                // zItems.zItem.getEntries().forEach(e -> {
+                                                //         output.accept((Item) e.get());
+                                                // });
 
-                                                zItems.zBlockItem.getEntries().forEach(e -> {
-                                                        output.accept((Item) e.get());
-                                                });
+                                                // zItems.zBlockItem.getEntries().forEach(e -> {
+                                                //         output.accept((Item) e.get());
+                                                // });
 
-                                                zItems.zTool.getEntries().forEach(e -> {
-                                                        output.accept((Item) e.get());
-                                                });
+                                                // zItems.zTool.getEntries().forEach(e -> {
+                                                //         output.accept((Item) e.get());
+                                                // });
                                                 
                                                  zItems.zNumbers.getEntries().forEach(e -> {
+                                                        output.accept((Item) e.get());
+                                                });
+
+                                                zItems.zOperators.getEntries().forEach(e -> {
                                                         output.accept((Item) e.get());
                                                 });
 
