@@ -1,4 +1,7 @@
 {
+  "item.math.div": "Div",
+  "item.math.for": "For",
+  "item.math.less": "Less",
   "item.math.plus": "Plus",
   "item.math.value_0": "Rune 0",
   "item.math.value_1": "Rune 1",
